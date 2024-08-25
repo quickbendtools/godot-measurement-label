@@ -13,13 +13,13 @@ enum Type {
 	## A value that represent an angle. X.X°
 	DEGREE,
 	
-	## A value that represent an inch. # ##/##''
+	## A value that represent an inch. X XX/XX''
 	INCH,
 	
-	## A Value that represents a Foot / Inch. #' # ##/##''
+	## A Value that represents a Foot / Inch. X' X XX/XX''
 	FT_INCH,
 	
-	## A Value that value may need to be displayed by a fraction.
+	## A Value that value may need to be displayed by a fraction. X X/X
 	## Such as cups. ::shrug::
 	FRACTION
 }
@@ -90,7 +90,6 @@ enum Type {
 func _ready():
 	add_theme_constant_override("separation", 0)
 	setup_label();
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -204,9 +203,9 @@ func add_label(text: String, color: Color = textColor):
 	add_child(label);
 
 func add_fraction_label(value: float):
-	if value == 0: pass;
+	if value == 0: pass ;
 	
-	var fontSize         = get_font_size();
+	var fontSize = get_font_size();
 	
 	var formatter        = FractionFormatter.new(value);
 	var sizeFactor       = 0.5;
@@ -231,7 +230,7 @@ func add_fraction_label(value: float):
 	var denominatorContainer = MarginContainer.new();
 	denominatorContainer.add_theme_constant_override("margin_left", fontSize * separationFactor);
 	denominatorContainer.add_theme_constant_override("margin_right", fontSize * separationFactor);
-	denominatorContainer.add_theme_constant_override("margin_top", fontSize * adjustFactor);	
+	denominatorContainer.add_theme_constant_override("margin_top", fontSize * adjustFactor);
 	
 	var denominatorLabel = Label.new();
 	denominatorLabel.add_theme_font_size_override("font_size", fontSize * sizeFactor);
