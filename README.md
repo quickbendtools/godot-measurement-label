@@ -10,3 +10,5 @@ A label that is used for different forms of measurements.
 - **Inch** - Represents a number of an inch value. `X XX/XX''`
 - **Ft_Inch** - Represents a number to a foot inch. `X' X XX/XX''`
 - **Fraction** - Represents a number with a fraction at the end. `X X/X`
+
+![Example](Example.png "Label Example")
