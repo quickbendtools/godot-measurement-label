@@ -203,7 +203,7 @@ func add_label(text: String, color: Color = textColor):
 	add_child(label);
 
 func add_fraction_label(value: float):
-	if value == 0: pass ;
+	if value == 0: return;
 	
 	var fontSize = get_font_size();
 	
